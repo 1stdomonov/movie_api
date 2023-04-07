@@ -4,8 +4,6 @@ morgan = require('morgan');
 
 const app = express();
 
-
-
 //create top 10 movies object
 let topMovies = [
     {
@@ -46,6 +44,9 @@ let topMovies = [
     },
   ];
 
+  //static requests routed to public folder
+  app.use(express.static('public'));
+
   //MORGAN to log requests to terminal
   app.use(morgan('common'));
 
@@ -58,3 +59,10 @@ let topMovies = [
     res.send('Welcome to myFlix movie app!');
   });
   
+//error handling
+
+
+
+  app.listen(8080, () => {
+    console.log('Your app is listening on port 8080.');
+  });
