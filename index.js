@@ -1,5 +1,7 @@
-//declare, require, and assign EXPRESS
+//declare, require, and assign EXPRESS and MORGAN
 const express = require('express');
+morgan = require('morgan');
+
 const app = express();
 
 
@@ -43,3 +45,16 @@ let topMovies = [
         Director: 'Steven Spielberg'
     },
   ];
+
+  //MORGAN to log requests to terminal
+  app.use(morgan('common'));
+
+  //GET requests
+  app.get('/movies', (req, res) => {
+    res.json(topBooks);
+  });
+
+  app.get('/', (req, res) => {
+    res.send('Welcome to myFlix movie app!');
+  });
+  
