@@ -52,7 +52,7 @@ let topMovies = [
 
   //GET requests
   app.get('/movies', (req, res) => {
-    res.json(topBooks);
+    res.json(topMovies);
   });
 
   app.get('/', (req, res) => {
