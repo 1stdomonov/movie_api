@@ -1,6 +1,6 @@
 //declare, require, and assign EXPRESS and MORGAN
-const express = require('express');
-morgan = require('morgan');
+const express = require('express'),
+    morgan = require('morgan');
 
 const app = express();
 
